@@ -1,4 +1,4 @@
-Issues Download [![Build Status](https://travis-ci.org/psgs/IssuesDownload.png?branch=master)](https://travis-ci.org/psgs/IssuesDownload)
+Issues Download [![Build Status](https://travis-ci.org/psgs/IssuesDownload.png?branch=master)](https://travis-ci.org/psgs/IssuesDownload)    [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/psgs/issuesdownload/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 ====================
 
 Issues Download is a lightweight java application that will pull issues from a github.com repository, and write them to a .csv file.
@@ -24,6 +24,3 @@ IssuesDownload uses [Apache Maven 3](http://maven.apache.org/) to compile!
 
 To compile IssuesDownload, simply install [Apache Maven](http://maven.apache.org/), and run:
 ```mvn -f pom.xml clean install -P shade```
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/psgs/issuesdownload/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
