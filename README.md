@@ -16,6 +16,9 @@ Id, Title, Creator, Assignee, Milestone, State, Body Text.
 
 The first line of the csv file shows the format used, and therefore does not display any information pulled from issues.
 
+ID | Title | Creator | Assignee | Milestone | State | Body Text
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+1 | Add a Bitdeli Badge to README | bitdeli-chef | psgs | First-Release | CLOSED | Pull request made by @psgs at https://bitdeli.com
 
 Compiling
 ---------
