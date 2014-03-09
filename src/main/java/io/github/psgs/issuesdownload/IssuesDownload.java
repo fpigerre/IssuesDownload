@@ -21,7 +21,7 @@ public class IssuesDownload {
         GUI.main(args);
     }
 
-    public static String saveIssues(String repoDetails) {
+    public static String saveIssues(String repoDetails, GHIssueState issueState) {
 
         String[] repoInfo = repoDetails.split("/");
 
@@ -33,7 +33,7 @@ public class IssuesDownload {
             writer.append("Id, Title, Creator, Assignee, Milestone, State, Body Text");
             writer.append("\n");
 
-            for (GHIssue issue : repository.getIssues(GHIssueState.OPEN)) {
+            for (GHIssue issue : repository.getIssues(issueState)) {
                 writer.append(String.valueOf(issue.getNumber()) + ",");
                 writer.append(issue.getTitle() + ",");
                 writer.append(issue.getUser().getLogin() + ",");
