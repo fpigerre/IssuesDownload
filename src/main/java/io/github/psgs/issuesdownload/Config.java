@@ -7,16 +7,14 @@ import java.util.Properties;
 
 public class Config {
 
-    public static String githubuser;
-    public static String githubpass;
+    public static String githubtoken;
 
     public static void loadConfiguration() throws FileNotFoundException, IOException {
 
         Properties config = new Properties();
         config.load(new FileInputStream("IssuesDownload.properties"));
 
-        githubuser = config.getProperty("GitHub-User");
-        githubpass = config.getProperty("GitHub-Password");
+        githubtoken = config.getProperty("GitHub-Token");
 
     }
 }

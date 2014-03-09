@@ -10,9 +10,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.mylyn.github</groupId>
-            <artifactId>org.eclipse.egit.github.core</artifactId>
-            <version>2.1.5</version>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>github-api</artifactId>
+            <version>1.49</version>
         </dependency>
     </dependencies>
 

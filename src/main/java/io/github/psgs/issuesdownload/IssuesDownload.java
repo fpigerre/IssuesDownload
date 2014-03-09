@@ -1,14 +1,13 @@
 package io.github.psgs.issuesdownload;
 
 import io.github.psgs.issuesdownload.gui.GUI;
-import org.eclipse.egit.github.core.Issue;
-import org.eclipse.egit.github.core.client.GitHubClient;
-import org.eclipse.egit.github.core.service.IssueService;
+import org.kohsuke.github.GHIssue;
+import org.kohsuke.github.GHIssueState;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
 
 public class IssuesDownload {
 
@@ -16,32 +15,40 @@ public class IssuesDownload {
         try {
             Config.loadConfiguration();
         } catch (IOException ex) {
-
+            System.out.println("An IOException had occured while loading the configuration!");
+            ex.printStackTrace();
         }
         GUI.main(args);
     }
 
     public static String saveIssues(String repoDetails) {
-        String[] repoInfo = repoDetails.split("/");
-        String repoOwner = repoInfo[0];
-        String repoName = repoInfo[1];
 
-        GitHubClient client = new GitHubClient();
-        client.setCredentials(Config.githubuser, Config.githubpass);
+        String[] repoInfo = repoDetails.split("/");
 
         try {
+            GitHub github = GitHub.connectUsingOAuth(Config.githubtoken);
+            GHRepository repository = github.getUser(repoInfo[0]).getRepository(repoInfo[1]);
+
             FileWriter writer = new FileWriter("issues.csv");
             writer.append("Id, Title, Creator, Assignee, Milestone, State, Body Text");
             writer.append("\n");
 
-            for (Issue issue : getAllIssues(client, repoOwner, repoName)) {
-                writer.append(String.valueOf(issue.getId()) + ",");
+            for (GHIssue issue : repository.getIssues(GHIssueState.OPEN)) {
+                writer.append(String.valueOf(issue.getNumber()) + ",");
                 writer.append(issue.getTitle() + ",");
-                writer.append(issue.getUser().getName() + ",");
-                writer.append(issue.getAssignee().getName() + ",");
-                writer.append(issue.getMilestone().getTitle() + ",");
+                writer.append(issue.getUser().getLogin() + ",");
+                if (issue.getAssignee() != null) {
+                    writer.append(issue.getAssignee().getName() + ",");
+                } else {
+                    writer.append(" ,");
+                }
+                if (issue.getMilestone() != null) {
+                    writer.append(issue.getMilestone().getTitle() + ",");
+                } else {
+                    writer.append(" ,");
+                }
                 writer.append(issue.getState() + ",");
-                writer.append(issue.getBodyText());
+                writer.append(issue.getBody() + ",");
                 writer.append("\n");
             }
             writer.flush();
@@ -55,12 +62,5 @@ public class IssuesDownload {
             }
         }
         return "An error has occured!";
-    }
-
-    public static List<Issue> getAllIssues(GitHubClient client, String repoOwner, String repoName) throws IOException {
-        IssueService service = new IssueService(client);
-        return service.getIssues(repoOwner, repoName,
-                Collections.singletonMap(IssueService.FILTER_STATE,
-                        IssueService.STATE_OPEN));
     }
 }
