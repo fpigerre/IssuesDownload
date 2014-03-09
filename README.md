@@ -1,8 +1,7 @@
 Issues Download [![Build Status](https://travis-ci.org/psgs/IssuesDownload.png?branch=master)](https://travis-ci.org/psgs/IssuesDownload)    [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/psgs/issuesdownload/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 ====================
 
-Issues Download is a lightweight java application that will pull issues from a github.com repository, and write them to a .csv file.
-IssuesDownload uses Eclipse eGit to connect to GitHub's api, and opencsv for simplicity when writing issues.
+Issues Download is a lightweight java application that will pull issues from a github.com repository, and write them to a .csv file. IssuesDownload uses [Kohsuke Kawaguchi's GitHub API for Java](http://github-api.kohsuke.org) to connect to GitHub when writing issues.
 
 To run the application once compiled, simply run the .jar file that should have been compiled.
 Once the process is complete, a .csv file should contain issue information in the .jar file directory.
