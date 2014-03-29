@@ -12,7 +12,7 @@ If downloading Issues doesn't work after multiple tries, you may need to copy th
 Screenshots
 -----------
 
-[Screenshot One](http://i.imgur.com/FBdjxlQ.png)
+![Screenshot One](http://i.imgur.com/FBdjxlQ.png)
 
 CSV Format
 ----------
