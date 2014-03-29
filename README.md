@@ -9,6 +9,11 @@ Please Note: When the .jar file is run, it will overwrite any other issues.csv f
 
 If downloading Issues doesn't work after multiple tries, you may need to copy the [IssuesDownload properties file](https://github.com/psgs/IssuesDownload/blob/master/src/main/resources/IssuesDownload.properties), and place it in the same directory as the .jar file, then edit the file to contain your [personal or an application access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use).
 
+Screenshots
+-----------
+
+[![Screenshot One](http://i.imgur.com/FBdjxlQ.png)
+
 CSV Format
 ----------
 
