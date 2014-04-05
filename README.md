@@ -9,6 +9,11 @@ Please Note: When the .jar file is run, it will overwrite any other issues.csv f
 
 If downloading Issues doesn't work after multiple tries, you may need to copy the [IssuesDownload properties file](https://github.com/psgs/IssuesDownload/blob/master/src/main/resources/IssuesDownload.properties), and place it in the same directory as the .jar file, then edit the file to contain your [personal or an application access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use).
 
+Releases
+--------
+
+- [v1.0](https://github.com/psgs/IssuesDownload/releases/download/v1.0/IssuesDownload-1.0-RELEASE.jar)
+
 Screenshots
 -----------
 
@@ -28,6 +33,8 @@ ID | Title | Creator | Assignee | Milestone | State | Body Text
 
 Compiling
 ---------
+
+Don't feel like compiling? You can download a pre-compiled release from the [Releases section](https://github.com/psgs/IssuesDownload#releases).
 
 IssuesDownload uses [Apache Maven 3](http://maven.apache.org/) to compile!
 
