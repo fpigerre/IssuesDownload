@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MainActivity</string>
+    <string name="app_name">Issues Download</string>
+    <string name="input_owner">Repository Owner</string>
+    <string name="input_name">Repository Name</string>
+    <string name="logo_description">Issues Download Header</string>
 </resources>

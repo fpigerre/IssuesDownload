@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:background="#E1E1E1">
+
+    <ImageView
+            android:id="@+id/logoView"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:src="@drawable/issuesdownloadlogo"
+            android:contentDescription="@string/logo_description"/>
+
     <TextView
+            android:id="@+id/editownertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_owner"
+            android:layout_below="@+id/logoView"
+            android:textColor="#000000"/>
+
+    <EditText
+            android:id="@+id/editowner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MainActivity"/>
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_marginBottom="150dp"/>
+            android:layout_marginLeft="127dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_below="@+id/logoView"
+            android:inputType="text"
+            android:textColor="#000000"/>
 
-</LinearLayout>
+    <TextView
+            android:id="@+id/editnametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_name"
+            android:layout_below="@+id/editowner"
+            android:textColor="#000000"/>
+
+    <EditText
+            android:id="@+id/editname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="127dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_below="@+id/editowner"
+            android:inputType="text"
+            android:textColor="#000000"/>
+</RelativeLayout>
 

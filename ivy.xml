@@ -1,0 +1,6 @@
+<ivy-module version="2.0">
+    <info organisation="io.github.psgs.android" module="IssuesDownload"/>
+    <dependencies>
+        <dependency org="org.kohsuke" name="github-api" rev="1.50"/>
+    </dependencies>
+</ivy-module>

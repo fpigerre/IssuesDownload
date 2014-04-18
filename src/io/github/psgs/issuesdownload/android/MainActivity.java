@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView = (ImageView) findViewById(R.id.logoView);
 
         imageView.setOnTouchListener(new OnSwipeTouchListener(this) {
             public void onSwipeTop() {
