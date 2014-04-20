@@ -1,5 +1,10 @@
 package io.github.psgs.issuesdownload.android;
 
+import org.kohsuke.github.GHIssue;
+import org.kohsuke.github.GHIssueState;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -10,7 +15,7 @@ public class CSVDownload {
         String[] repoInfo = repoDetails.split("/");
 
         try {
-            GitHub github = GitHub.connectUsingOAuth();
+            GitHub github = GitHub.connectUsingOAuth(null);
             GHRepository repository = github.getUser(repoInfo[0]).getRepository(repoInfo[1]);
 
             FileWriter writer = new FileWriter("issues.csv");
