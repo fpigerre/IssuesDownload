@@ -29,12 +29,15 @@ public class MainActivity extends Activity {
             public void onSwipeTop() {
                 Toast.makeText(MainActivity.this, "top", Toast.LENGTH_SHORT).show();
             }
+
             public void onSwipeRight() {
                 Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT).show();
             }
+
             public void onSwipeLeft() {
                 Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();
             }
+
             public void onSwipeBottom() {
                 Toast.makeText(MainActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
@@ -46,7 +49,7 @@ public class MainActivity extends Activity {
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intentMain = new Intent(MainActivity.this ,
+                Intent intentMain = new Intent(MainActivity.this,
                         SubmitActivity.class);
                 MainActivity.this.startActivity(intentMain);
             }
