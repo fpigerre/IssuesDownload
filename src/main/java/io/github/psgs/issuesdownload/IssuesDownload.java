@@ -15,7 +15,7 @@ public class IssuesDownload {
         try {
             Config.loadConfiguration();
         } catch (IOException ex) {
-            System.out.println("An IOException had occured while loading the configuration!");
+            System.out.println("An IOException occurred while loading the configuration!");
             ex.printStackTrace();
         }
         GUI.main(args);
@@ -55,12 +55,12 @@ public class IssuesDownload {
             writer.close();
             return "Download Complete!";
         } catch (IOException ex) {
-            System.out.println("An IOException has occured!");
+            System.out.println("An IOException has occurred!");
             ex.printStackTrace();
             if (ex.getMessage().equalsIgnoreCase("api.github.com")) {
                 return "An error has occurred reaching " + ex.getMessage() + "! Please check your network connection.";
             }
         }
-        return "An error has occured!";
+        return "An error has occurred!";
     }
 }
