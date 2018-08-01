@@ -26,9 +26,9 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15)); // NOI18N
-        jLabel1.setText("             Issues Download v1.0-SNAPSHOT");
+        jLabel1.setText("             Issues Download v1.1-SNAPSHOT");
 
-        jTextField1.setText("Path to Repository (psgs/IssuesDownload)");
+        jTextField1.setText("UserName/RepoName");
 
         jButton1.setText("Download");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
